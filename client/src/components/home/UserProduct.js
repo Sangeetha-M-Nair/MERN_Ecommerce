@@ -152,7 +152,7 @@ function UserProduct(props) {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="">
+                    <a className="nav-link" href="/userOrders">
                       USER
                       {/* {user.firstname} */}
                       {/* <span className="sr-only">(current)</span> */}
@@ -455,7 +455,6 @@ function UserProduct(props) {
                 <div className="map">
                   <div id="googleMap" />
                 </div>
-                
               </div>
             </div>
           </div>
