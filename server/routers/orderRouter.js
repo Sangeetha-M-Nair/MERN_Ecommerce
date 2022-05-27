@@ -21,18 +21,18 @@ const { Console, count } = require("console");
 const authMerchant = require("../middleware/authMerchant.js");
 const { json } = require("body-parser");
 
-router.get("/allorders", async (req, res) => {
+router.get("/allorders/:id", async (req, res) => {
   try {
     const PAGE_SIZE = 6;
     const page = parseInt(req.query.page || "0");
 
     const total = await Order.countDocuments({});
-    const orders = await Order.find({})
+    const orders = await Order.find()
       .limit(PAGE_SIZE)
       .skip(PAGE_SIZE * page);
 
-    // const token = req.cookies;
-    // console.log("all orders....." + orders); //here all users...
+    //  const token = req.cookies;
+    console.log("all orders....." + orders);
     res.json({ totalPages: Math.ceil(total / PAGE_SIZE), orders });
   } catch (err) {
     res.status(500).send();
@@ -126,24 +126,25 @@ router.post("/createOrder/:id", authUser, async (req, res) => {
     // console.log("000000000000" + profile);
 
     const { amount, products, address } = req.body;
-    
 
     // console.log(Pimage);
     const producTab = await Product.findById(products);
-//--------------------------
+    //--------------------------
     console.log(producTab);
     const quantitty = producTab.quantity;
-        const countt = order.products.count;
-        console.log("c----------" + countt);
+    const countt = order.products.count;
+    console.log("c----------" + countt);
     const totalquantity = quantitty - countt;
     console.log(quantitty);
-    console.log("qqqqqqqqqqqqq-----------------------------------------" + totalquantity);
+    console.log(
+      "qqqqqqqqqqqqq-----------------------------------------" + totalquantity
+    );
 
     // console.log(productt.quantity);
     // console.log(productt.count);
 
     // const Stock = productt.quantity - products.count;
-//--------------------------------------------
+    //--------------------------------------------
     console.log(amount + products + address);
     const order = new Order({ amount, products, address, user });
     // quantity=
