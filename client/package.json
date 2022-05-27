@@ -1,0 +1,66 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.3.0",
+    "@material-ui/icons": "^4.11.2",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.0",
+    "bootstrap": "^5.1.3",
+    "braintree-web-drop-in-react": "^1.2.1",
+    "cors": "^2.8.5",
+    "create-use-context": "^1.0.1",
+    "css-loader": "^6.6.0",
+    "drop-down": "^0.0.1",
+    "fontawesome-4.7": "^4.7.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^7.0.1",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.2.0",
+    "react-dom": "^17.0.2",
+    "react-dropdown": "^1.10.0",
+    "react-modal": "^3.14.4",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.0",
+    "react-select": "^5.3.1",
+    "react-shopping-cart": "^1.9.5",
+    "web-vitals": "^2.1.4",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.69.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

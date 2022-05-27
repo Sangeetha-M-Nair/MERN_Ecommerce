@@ -1,0 +1,20 @@
+{
+  "name": "engineering_works_mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "create-react-app": "^5.0.0",
+    "multer": "^1.4.4"
+  },
+  "proxy": "http://localhost:5000/"
+}
